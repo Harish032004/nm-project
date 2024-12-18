@@ -1,0 +1,26 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.UPLOAD_URL = exports.ORDER_STATUSES_URL = exports.ORDER_TRACK_URL = exports.ORDER_PAY_URL = exports.ORDER_NEW_FOR_CURRENT_USER_URL = exports.ORDER_CREATE_URL = exports.ORDERS_URL = exports.UPDATE_USER_URL = exports.USER_BY_ID_URL = exports.USER_BLOCK_URL = exports.GET_ALL_USERS = exports.USER_CHANGE_PASSWORD_URL = exports.USER_UPDATE_PROFILE_URL = exports.USER_REGISTER_URL = exports.USER_LOGIN_URL = exports.FOODS_BY_ID_URL = exports.FOODS_BY_TAG_URL = exports.FOODS_BY_SEARCH_URL = exports.FOODS_TAGS_URL = exports.FOODS_URL = void 0;
+// const BASE_URL = 'http://localhost:5000'
+const environment_1 = require("src/environments/environment");
+const BASE_URL = environment_1.environment.production ? '' : 'http://localhost:5000';
+exports.FOODS_URL = BASE_URL + '/api/foods';
+exports.FOODS_TAGS_URL = exports.FOODS_URL + '/tags';
+exports.FOODS_BY_SEARCH_URL = exports.FOODS_URL + '/search/';
+exports.FOODS_BY_TAG_URL = exports.FOODS_URL + '/tag/';
+exports.FOODS_BY_ID_URL = exports.FOODS_URL + '/';
+exports.USER_LOGIN_URL = BASE_URL + '/api/users/login';
+exports.USER_REGISTER_URL = BASE_URL + '/api/users/register';
+exports.USER_UPDATE_PROFILE_URL = BASE_URL + '/api/users/updateProfile';
+exports.USER_CHANGE_PASSWORD_URL = BASE_URL + '/api/users/changePassword';
+exports.GET_ALL_USERS = BASE_URL + '/api/users/getAll/';
+exports.USER_BLOCK_URL = BASE_URL + '/api/users/toggleBlock/';
+exports.USER_BY_ID_URL = BASE_URL + '/api/users/getById/';
+exports.UPDATE_USER_URL = BASE_URL + '/api/users/update/';
+exports.ORDERS_URL = BASE_URL + '/api/orders';
+exports.ORDER_CREATE_URL = exports.ORDERS_URL + '/create';
+exports.ORDER_NEW_FOR_CURRENT_USER_URL = exports.ORDERS_URL + '/newOrderForCurrentUser';
+exports.ORDER_PAY_URL = exports.ORDERS_URL + '/pay';
+exports.ORDER_TRACK_URL = exports.ORDERS_URL + '/track/';
+exports.ORDER_STATUSES_URL = exports.ORDERS_URL + '/allstatus';
+exports.UPLOAD_URL = BASE_URL + '/api/upload';
